@@ -1,0 +1,320 @@
+/* Swiss Tournament Manager Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+}
+
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+h2 {
+  color: #4a5568;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin: 20px 0 15px 0;
+}
+
+/* Input Styles */
+input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 16px;
+  margin: 8px 12px 8px 0;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px 8px 8px 0;
+  min-width: 120px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Player List */
+#playerList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#playerList li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+#playerList li:hover {
+  background: #edf2f7;
+  transform: translateX(4px);
+}
+
+/* Pairings Section */
+#pairings {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.pairing {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.pairing:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.pairing .vs {
+  font-weight: bold;
+  color: #667eea;
+  margin: 0 15px;
+}
+
+/* Results Section */
+#results {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.result-input {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.result-buttons button {
+  min-width: 80px;
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.result-buttons button.win {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.result-buttons button.draw {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+
+.result-buttons button.loss {
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+}
+
+/* Standings */
+#standings {
+  margin-top: 20px;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.standings-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.standings-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.standings-table tr:hover td {
+  background: #f8fafc;
+}
+
+.standings-table tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+/* Round Number Highlight */
+#roundNum {
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    max-width: none;
+    margin: 8px 0;
+  }
+  
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  .pairing {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .result-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .result-buttons {
+    justify-content: center;
+  }
+  
+  .standings-table {
+    font-size: 14px;
+  }
+  
+  .standings-table th,
+  .standings-table td {
+    padding: 8px 6px;
+  }
+}
+
+/* Animation for showing tournament section */
+#tournament-section {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #667eea;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

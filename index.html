@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiss Tournament Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Swiss Tournament Manager</h1>
+
+  <section id="player-section">
+    <h2>Add Players</h2>
+    <input type="text" id="playerName" placeholder="Player Name" />
+    <input type="text" id="playerID" placeholder="Unique ID" />
+    <button id="addPlayerBtn">Add Player</button>
+    <ul id="playerList"></ul>
+  </section>
+
+  <section id="tournament-section" style="display:none;">
+    <h2>Round <span id="roundNum">1</span></h2>
+    <button id="pairingsBtn">Generate Pairings</button>
+    <div id="pairings"></div>
+
+    <h3>Enter Results</h3>
+    <div id="results"></div>
+
+    <button id="standingsBtn">Show Standings</button>
+    <div id="standings"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
